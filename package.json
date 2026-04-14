@@ -11,7 +11,8 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --minify --clean",
     "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "prepare": "npm run build"
   },
   "keywords": [
     "nextjs",
@@ -30,8 +31,7 @@
   },
   "dependencies": {
     "framer-motion": "^11.0.0",
-    "lucide-react": "^0.300.0",
-    "oos-system": "file:../oos-frontend"
+    "lucide-react": "^0.300.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
