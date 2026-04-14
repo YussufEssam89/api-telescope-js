@@ -24,3 +24,8 @@ export const pushLog = (log: Omit<ApiLogEntry, 'id'>) => {
         apiLogs.pop(); // Remove the oldest
     }
 };
+
+// Helper to clear logs
+export const clearApiLogs = () => {
+    apiLogs.length = 0;
+};

@@ -43,7 +43,15 @@ export const Dashboard: React.FC<DashboardProps> = ({
         log.source?.toLowerCase().includes(search.toLowerCase())
     );
 
-    const clearLogs = () => setLogs([]);
+    const clearLogs = async () => {
+        try {
+            await fetch(endpoint, { method: 'DELETE' });
+            setLogs([]);
+        } catch (e) {
+            console.error('Failed to clear server logs', e);
+            setLogs([]); // Fallback to local clear
+        }
+    };
 
     const getStatusColor = (status: number) => {
         if (status >= 200 && status < 300) return 'text-green-500 bg-green-500/10 border-green-500/20';
