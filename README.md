@@ -31,18 +31,7 @@ declare global {
 }
 ```
 
-### 2. Monitoring API Routes
-Wrap your Next.js API handlers using `withLogger`:
-
-```typescript
-import { withLogger } from '@jotech/api-telescope-js';
-
-export const GET = withLogger(async (req: Request) => {
-  return Response.json({ status: 'ok' });
-});
-```
-
-### 3. Debug Dashboard
+### 2. Debug Dashboard
 Create a debug page (e.g., `app/debug/page.tsx`) to view the logs:
 
 ```tsx
@@ -54,7 +43,7 @@ export default function DebugPage() {
 }
 ```
 
-### 4. API Logs Endpoint
+### 3. API Logs Endpoint
 Create an API route to serve the logs (e.g., `app/api/debug-logs/route.ts`):
 
 ```typescript
