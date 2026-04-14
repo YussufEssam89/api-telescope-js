@@ -1,0 +1,43 @@
+{
+  "name": "@jotech/api-telescope-js",
+  "version": "1.0.0",
+  "description": "A real-time API monitoring dashboard (Telescope-like) for Next.js applications.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "lint": "tsc"
+  },
+  "keywords": [
+    "nextjs",
+    "api",
+    "monitoring",
+    "telescope",
+    "debugger",
+    "logs"
+  ],
+  "author": "Jotech",
+  "license": "MIT",
+  "peerDependencies": {
+    "next": ">=13.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.300.0",
+    "oos-system": "file:../oos-frontend"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
